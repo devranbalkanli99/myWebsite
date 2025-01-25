@@ -30,34 +30,44 @@ export const Skills = () => {
         className="max-w-full my-0 mx-auto"
       >
         <SwiperSlide>
-          <Image src="/images/react.svg" width={50} height={50} />
+          <Image src="/images/react.svg" width={50} height={50} alt="icon" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/javascript.svg" width={50} height={50} />
+          <Image
+            src="/images/javascript.svg"
+            width={50}
+            height={50}
+            alt="icon"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/html.svg" width={50} height={50} />
+          <Image src="/images/html.svg" width={50} height={50} alt="icon" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/dotnet.svg" width={50} height={50} />
+          <Image src="/images/dotnet.svg" width={50} height={50} alt="icon" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/angular.svg" width={50} height={50} />
+          <Image src="/images/angular.svg" width={50} height={50} alt="icon" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/vue.svg" width={50} height={50} />
+          <Image src="/images/vue.svg" width={50} height={50} alt="icon" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/typescript.svg" width={50} height={50} />
+          <Image
+            src="/images/typescript.svg"
+            width={50}
+            height={50}
+            alt="icon"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/tailwind.svg" width={50} height={50} />
+          <Image src="/images/tailwind.svg" width={50} height={50} alt="icon" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/nextjs.svg" width={50} height={50} />
+          <Image src="/images/nextjs.svg" width={50} height={50} alt="icon" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/images/strapi.svg" width={50} height={50} />
+          <Image src="/images/strapi.svg" width={50} height={50} alt="icon" />
         </SwiperSlide>
       </Swiper>
     </div>
