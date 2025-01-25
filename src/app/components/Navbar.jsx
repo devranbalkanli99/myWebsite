@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import "./navbar.css";
 
 const navLinks = [
   {
@@ -31,7 +32,10 @@ const Navbar = () => {
     const target = document.querySelector(path);
 
     if (target) {
-      const offset = 100;
+      // Offset değerini cihaz genişliğine göre belirleyelim
+      const isMobile = window.innerWidth <= 768; // 768px altı mobil kabul edilir
+      const offset = isMobile ? 110 : 100; // Mobilde 50px, diğer cihazlarda 100px
+
       const elementPosition =
         target.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
@@ -40,15 +44,18 @@ const Navbar = () => {
         top: offsetPosition,
         behavior: "smooth",
       });
+
+      // Menüden tıklandığında kapanmasını sağla
+      setNavbarOpen(false);
     }
   };
 
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
+      <div className="navbar-container">
         <Link
           href={"/"}
-          className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 text-[36px] text-[#ADB7BE] hover:text-white"
+          className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 text-[24px] sm:text-[36px] text-[#ADB7BE] hover:text-white name"
         >
           Devran Balkanlı
         </Link>
@@ -69,14 +76,19 @@ const Navbar = () => {
             </button>
           )}
         </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+        <div
+          className={` my-[0px] mx-auto md:m-[0px] ${
+            navbarOpen ? "flex" : "hidden"
+          } md:flex md:w-auto`}
+          id="navbar"
+        >
+          <ul className="flex flex-col gap-[0px] py-4 items-center sm:flex-row gap-[50px] navbar-list">
             {navLinks.map((link) => (
               <a
                 key={link.title}
                 href={link.path}
                 onClick={(e) => handleClick(e, link.path)}
-                className="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white"
+                className=" py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white"
               >
                 {link.title}
               </a>
@@ -84,7 +96,6 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>
   );
 };

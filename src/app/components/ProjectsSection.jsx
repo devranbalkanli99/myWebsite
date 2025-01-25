@@ -37,7 +37,7 @@ const projectsData = [
     image: "/images/networkdry.png",
     tag: ["All", "Professional"],
     description:
-      "Networkdry is a online cleaning service provider. We've made their new web and mobile application. I was in the project manager and frontend developer positions during the development process. I also developed their web application using Nextjs, tailwind, context API, RestFull API and Strapi. ",
+      "Networkdry is a online cleaning service provider. We've made their new web and mobile application. I was in the frontend developer position during the development process. I also developed their web application using Nextjs, tailwind, context API, RestFull API and Strapi. ",
     icons: [
       "/images/react.svg",
       "/images/typescript.svg",
@@ -76,7 +76,7 @@ const projectsData = [
     image: "/images/notisecure.png",
     tag: ["All", "Professional"],
     description:
-      "NotiSecure is a security and compliance platform tailored for businesses. I took on the roles of Frontend Developer and Project Manager in this project. I developed the web application using Vue.js, Vuetify, Restful APIs, and JavaScript SDKs, ensuring a seamless and secure user experience while aligning with the platform's goals.",
+      "NotiSecure is a security and compliance platform tailored for businesses. I took on the roles of Frontend Developer and PM in this project. I developed the web application ensuring a seamless and secure user experience while aligning with the platform's goals.",
     icons: ["/images/vue.svg", "/images/javascript.svg", "/images/dotnet.svg"],
   },
   {
@@ -143,7 +143,7 @@ const ProjectsSection = () => {
           isSelected={tag === "Personal"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-2 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}

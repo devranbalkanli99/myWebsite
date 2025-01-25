@@ -11,10 +11,10 @@ const TAB_DATA = [
     id: "experience",
     content: (
       <div className="flex flex-col gap-[20px] items-center justify-center">
-        <p className="w-full font-bold text-[20px] text-left">
+        <p className="w-full font-bold text-left text-[18px] sm:text-[20px]">
           Doğuş Teknoloji (04.07.2022 - 09.09.2024)
         </p>
-        <p className="text-base lg:text-lg">
+        <p className="text-[14px] sm:text-[16px]">
           At Doğuş Technology, I played a key role in developing innovative and
           user-centric web applications using modern technologies such as React,
           Next.js, TypeScript, Vue.js, and .NET. I contributed to various
@@ -103,7 +103,7 @@ const AboutSection = () => {
       <div className="md:grid gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="max-w-full mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white">About Me</h2>
-          <p className="text-base lg:text-lg">
+          <p className="text-[14px] sm:text-[16px]">
             In addition to my expertise in front-end development, I have basic
             knowledge of .NET. I have led multiple projects in the frontend
             domain, creating user-friendly web applications. My goal is to

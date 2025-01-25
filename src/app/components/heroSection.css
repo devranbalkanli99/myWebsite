@@ -1,0 +1,7 @@
+@media (max-width: 1025px) {
+  .hero-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
