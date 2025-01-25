@@ -32,9 +32,8 @@ const Navbar = () => {
     const target = document.querySelector(path);
 
     if (target) {
-      // Offset değerini cihaz genişliğine göre belirleyelim
-      const isMobile = window.innerWidth <= 768; // 768px altı mobil kabul edilir
-      const offset = isMobile ? 110 : 100; // Mobilde 50px, diğer cihazlarda 100px
+      const isMobile = window.innerWidth <= 768;
+      const offset = isMobile ? 110 : 100;
 
       const elementPosition =
         target.getBoundingClientRect().top + window.scrollY;
@@ -45,7 +44,6 @@ const Navbar = () => {
         behavior: "smooth",
       });
 
-      // Menüden tıklandığında kapanmasını sağla
       setNavbarOpen(false);
     }
   };

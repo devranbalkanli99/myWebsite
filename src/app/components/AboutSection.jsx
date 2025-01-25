@@ -34,7 +34,7 @@ const TAB_DATA = [
       <div className="flex flex-col gap-[10px]">
         <p className="font-bold text-[20px]">Beykent University</p>
         <p className="italic text-[14px]">
-          2019 – 2023 | Bachelor’s Degree in Computer Engineering
+          2019 – 2023 | Bachelor&apos;s Degree in Computer Engineering
         </p>
         <p>
           During my studies at Beykent University, I built a strong foundation
@@ -101,7 +101,7 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <div className="max-w-full mt-4 md:mt-0 text-left flex flex-col h-full">
+        <div className="max-w-full mt-4 md:mt-0 text-left flex flex-col h-full gap-[10px]">
           <h2 className="text-4xl font-bold text-white">About Me</h2>
           <p className="text-[14px] sm:text-[16px]">
             In addition to my expertise in front-end development, I have basic
@@ -111,7 +111,7 @@ const AboutSection = () => {
             have in frontend, and to develop user-friendly projects as a
             fullstack developer while reaching the highest level of competence
             possible. I am flexible and skilled enough to work as a frontend,
-            backend, or fullstack developer depending on my organization’s
+            backend, or fullstack developer depending on my organization&apos;s
             needs, and I aim to be a key contributor to my team.
           </p>
           <div className="flex flex-row justify-start mt-8">
